@@ -30,7 +30,7 @@ Then:
 - Run prisma generate
 - Ensure database is connected successfully
 
-If any step fails:
+## If any step fails:
 - Fix the schema or config
 - Re-run migration/generate
 - Repeat until everything works

@@ -1,4 +1,4 @@
-Read AGENTS.md and ARCHITECTURE.md.
+Read AGENTS.md and ARCHITECTURE.md, docs/plan.md.
 
 Implement Phase 5: Backend Cleanup and Refactor.
 

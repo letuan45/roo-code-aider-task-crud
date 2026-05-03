@@ -1,21 +1,12 @@
 import prisma from "../lib/prisma";
 import type { TaskStatus } from "@prisma/client";
+import type { CreateTaskInput, UpdateTaskInput } from "../types";
 
 const VALID_TRANSITIONS: Record<TaskStatus, TaskStatus[]> = {
   TODO: ["IN_PROGRESS"],
   IN_PROGRESS: ["DONE"],
   DONE: [],
 };
-
-interface CreateTaskInput {
-  title: string;
-  description?: string;
-}
-
-interface UpdateTaskInput {
-  title?: string;
-  description?: string;
-}
 
 function validateStatusTransition(
   current: TaskStatus,
@@ -53,7 +44,6 @@ export async function getTaskById(id: number) {
 }
 
 export async function updateTask(id: number, input: UpdateTaskInput) {
-  // Ensure task exists
   await getTaskById(id);
 
   return prisma.task.update({
@@ -66,7 +56,6 @@ export async function updateTask(id: number, input: UpdateTaskInput) {
 }
 
 export async function deleteTask(id: number) {
-  // Ensure task exists
   await getTaskById(id);
 
   return prisma.task.delete({ where: { id } });
