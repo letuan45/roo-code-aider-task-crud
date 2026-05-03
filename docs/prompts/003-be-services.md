@@ -4,7 +4,7 @@ Implement Phase 3: Backend - Core Logic.
 
 Focus only on backend business logic.
 
-Tasks
+## Tasks
 
 Implement `task.service.ts` with the following functions:
 
@@ -15,7 +15,7 @@ Implement `task.service.ts` with the following functions:
 - deleteTask
 - updateTaskStatus
 
-Business Rules
+## Business Rules
 
 Implement strict status transition validation:
 
@@ -27,7 +27,7 @@ If invalid transition occurs:
 - throw an error
 - do not silently ignore
 
-Requirements
+## Requirements
 
 - All business logic must be inside task.service.ts
 - Controllers/routes must NOT contain logic
@@ -35,7 +35,7 @@ Requirements
 - Keep implementation minimal and readable
 - Use Prisma client from previous phase
 
-Testing (IMPORTANT)
+## Testing (IMPORTANT)
 
 After implementation:
 
@@ -45,7 +45,7 @@ After implementation:
   - invalid transitions (must throw errors)
   - basic CRUD behavior
 
-Execution loop
+## Execution loop
 
 - Run unit tests after writing them
 - If tests fail:
@@ -55,7 +55,7 @@ Execution loop
 
 Do not finish until all tests are passing.
 
-Constraints
+## Constraints
 
 - No new modules
 - No architecture changes

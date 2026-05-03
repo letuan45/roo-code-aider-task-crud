@@ -2,7 +2,7 @@ Read AGENTS.md and ARCHITECTURE.md, docs/plan.md
 
 Implement Phase 2: Backend - Data Layer.
 
-Tasks:
+## Tasks:
 - Setup Prisma in backend/
 - Initialize Prisma with PostgreSQL datasource
 - Define Task model with fields:
@@ -17,7 +17,7 @@ Tasks:
 - Run database migration
 - (Optional) Add seed data for Task model
 
-Requirements:
+## Requirements:
 - Keep setup minimal and standard
 - Do not add extra tables or features
 - Do not introduce authentication or users table

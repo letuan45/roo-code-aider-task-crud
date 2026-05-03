@@ -4,13 +4,9 @@
 
 Build a simple fullstack CRUD app for AI agent workflows. Project will be about a simple CRUD task app
 
----
-
 ## Goal
 
 Create project structure and generate initial `.md` files.
-
----
 
 ## Constraints
 
@@ -19,8 +15,6 @@ Create project structure and generate initial `.md` files.
 * DO NOT over-engineer
 * ONLY create folders and `.md` files
 * Keep everything minimal and editable
-
----
 
 ## Structure
 
@@ -36,8 +30,6 @@ Create project structure and generate initial `.md` files.
 │   ├── plan.md
 │   └── prompts/
 
----
-
 ## Files
 
 Create all `.md` files with short placeholder content:
@@ -50,15 +42,11 @@ Create all `.md` files with short placeholder content:
 * docs/plan.md → phases
 * docs/prompts/000-example.md → sample prompt
 
----
-
 ## Output
 
 * Show folder structure
 * Show content of each `.md` file
 * Keep content short and simple
-
----
 
 ## Reminder
 

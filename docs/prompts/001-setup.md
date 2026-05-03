@@ -2,7 +2,7 @@ Read AGENTS.md and ARCHITECTURE.md, docs/plan.md
 
 Implement Phase 1: Project Setup in docs/plan.md
 
-Tasks:
+## Tasks:
 - Create project structure:
   - backend/
   - frontend/
@@ -11,7 +11,7 @@ Tasks:
 - Setup Docker Compose with PostgreSQL
 - Add .env.example with required environment variables
 
-Requirements:
+## Requirements:
 - Keep everything minimal
 - Do not add authentication or extra features
 - Use simple and common tooling only
@@ -28,7 +28,7 @@ Then:
   - frontend can start
   - database container is running
 
-If any step fails:
+## If any step fails:
 - Fix the issue
 - Re-run the command
 - Repeat until everything works

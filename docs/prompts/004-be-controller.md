@@ -2,7 +2,7 @@ Read AGENTS.md and ARCHITECTURE.md, docs/plan.md.
 
 Implement Phase 4: Backend - API Layer.
 
-Tasks
+## Tasks
 
 Create:
 
@@ -18,7 +18,7 @@ Implement REST API endpoints:
 - DELETE /tasks/:id
 - PATCH /tasks/:id/status
 
-Architecture Rules (STRICT)
+## Architecture Rules (STRICT)
 
 - Controllers MUST be thin
 - Controllers must NOT contain business logic
@@ -26,7 +26,7 @@ Architecture Rules (STRICT)
 - Routes only define endpoint mapping
 - Do not introduce new layers (no extra middleware/service layers unless required by existing architecture)
 
-Implementation Rules
+## Implementation Rules
 
 - Use existing task.service.ts from Phase 3
 - Do not duplicate logic from service layer
@@ -35,7 +35,7 @@ Implementation Rules
 - Do not add validation libraries unless already used in project
 - Do not add pagination, filtering, or extra endpoints
 
-Error Handling
+## Error Handling
 
 - Return proper HTTP status codes:
   - 200 OK (GET, PUT, PATCH)
@@ -43,7 +43,7 @@ Error Handling
   - 404 Not Found (invalid id)
   - 400 Bad Request (invalid status transition or input)
 
-Integration Requirement
+## Integration Requirement
 
 After implementation:
 
@@ -54,7 +54,7 @@ After implementation:
 
 Execution Loop
 
-If any issue occurs:
+## If any issue occurs:
 
 - Fix controller or route mapping
 - Ensure service remains source of truth for business logic

@@ -59,7 +59,7 @@ Build a simple fullstack Task Tracker CRUD app.
 ## Phase 5: Backend Cleanup
 
 - Refactor for clarity
-- Extract reusable logic if needed (utils/)
+- Extract reusable logic if needed (utils/, const.ts, type.ts)
 - Keep structure simple
 - Ensure code follows architecture rules
 
@@ -72,16 +72,7 @@ Build a simple fullstack Task Tracker CRUD app.
 - Handle loading + error states
 - Connect to backend API
 
-## Phase 7: Integration
-
-- Verify full flow:
-  - create task
-  - update task
-  - update status
-  - list tasks
-  - delete task
-
-## Phase 8: Documentation
+## Phase 7: Documentation
 
 - Basic README
 - Update architecture if needed
