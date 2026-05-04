@@ -1,12 +1,12 @@
-import type { Task } from "../types";
+import type { Task, TaskStatus } from "../types";
 
-const STATUS_COLORS: Record<string, string> = {
+const STATUS_COLORS: Record<TaskStatus, string> = {
   TODO: "bg-yellow-100 text-yellow-800",
   IN_PROGRESS: "bg-blue-100 text-blue-800",
   DONE: "bg-green-100 text-green-800",
 };
 
-const NEXT_STATUS: Record<string, string | null> = {
+const NEXT_STATUS: Record<TaskStatus, TaskStatus | null> = {
   TODO: "IN_PROGRESS",
   IN_PROGRESS: "DONE",
   DONE: null,
@@ -16,7 +16,7 @@ interface TaskItemProps {
   task: Task;
   onEdit: (task: Task) => void;
   onDelete: (id: number) => void;
-  onStatusChange: (id: number, status: string) => void;
+  onStatusChange: (id: number, status: TaskStatus) => void;
   isUpdating?: boolean;
 }
 

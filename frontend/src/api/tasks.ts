@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Task, CreateTaskInput, UpdateTaskInput } from "../types";
+import type { Task, TaskStatus, CreateTaskInput, UpdateTaskInput } from "../types";
 
 const api = axios.create({ baseURL: "/api" });
 
@@ -32,7 +32,7 @@ export async function deleteTask(id: number): Promise<void> {
 
 export async function updateTaskStatus(
   id: number,
-  status: string
+  status: TaskStatus
 ): Promise<Task> {
   const { data } = await api.patch(`/tasks/${id}/status`, { status });
   return data;

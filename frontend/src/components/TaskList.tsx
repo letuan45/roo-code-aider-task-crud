@@ -1,11 +1,11 @@
-import type { Task } from "../types";
+import type { Task, TaskStatus } from "../types";
 import TaskItem from "./TaskItem";
 
 interface TaskListProps {
   tasks: Task[];
   onEdit: (task: Task) => void;
   onDelete: (id: number) => void;
-  onStatusChange: (id: number, status: string) => void;
+  onStatusChange: (id: number, status: TaskStatus) => void;
   updatingId?: number | null;
 }
 
