@@ -1,6 +1,7 @@
 import prisma from "../lib/prisma";
 import type { TaskStatus } from "@prisma/client";
 import type { CreateTaskInput, UpdateTaskInput } from "../types";
+import { NotFoundError, ValidationError } from "../lib/errors";
 
 const VALID_TRANSITIONS: Record<TaskStatus, TaskStatus[]> = {
   TODO: ["IN_PROGRESS"],
@@ -14,7 +15,7 @@ function validateStatusTransition(
 ): void {
   const allowed = VALID_TRANSITIONS[current];
   if (!allowed.includes(next)) {
-    throw new Error(
+    throw new ValidationError(
       `Invalid status transition: ${current} → ${next}`
     );
   }
@@ -38,14 +39,12 @@ export async function getTasks() {
 export async function getTaskById(id: number) {
   const task = await prisma.task.findUnique({ where: { id } });
   if (!task) {
-    throw new Error(`Task with id ${id} not found`);
+    throw new NotFoundError("Task", id);
   }
   return task;
 }
 
 export async function updateTask(id: number, input: UpdateTaskInput) {
-  await getTaskById(id);
-
   return prisma.task.update({
     where: { id },
     data: {
@@ -56,8 +55,6 @@ export async function updateTask(id: number, input: UpdateTaskInput) {
 }
 
 export async function deleteTask(id: number) {
-  await getTaskById(id);
-
   return prisma.task.delete({ where: { id } });
 }
 

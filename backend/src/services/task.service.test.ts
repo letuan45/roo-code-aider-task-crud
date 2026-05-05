@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import prisma from "../lib/prisma";
 import {
   createTask,
@@ -10,12 +10,8 @@ import {
 } from "./task.service";
 
 describe("task.service", () => {
-  // Clean database between tests
+  // Clean database before each test
   beforeEach(async () => {
-    await prisma.task.deleteMany();
-  });
-
-  afterEach(async () => {
     await prisma.task.deleteMany();
   });
 
